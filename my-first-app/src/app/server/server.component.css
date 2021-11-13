@@ -1,0 +1,13 @@
+h1 {
+  color: pink;
+}
+
+p {
+  color: blue;
+  margin-left: 3em;
+}
+
+.example {
+  color: orange;
+  margin-left: 5em;
+}
