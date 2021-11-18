@@ -11,3 +11,21 @@ p {
   color: orange;
   margin-left: 5em;
 }
+
+.online {
+  padding: 1em;
+  font: normal normal 1.25em bold;
+  color: lightgreen;
+}
+
+.offline {
+  padding: 1em;
+  font: italic normal 1.25em bold;
+  color: pink;
+}
+
+.turnWhite {
+  color: white;
+  padding: 1em;
+  font: normal normal 1em bold;
+}

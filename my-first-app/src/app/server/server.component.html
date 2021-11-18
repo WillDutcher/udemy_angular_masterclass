@@ -2,10 +2,14 @@
   <div class="row">
     <div class="col-xs-12">
       <h1>Server Component Header</h1>
-      <p>Server {{ 'with' }} id {{ 'asdf' }} is {{ serverStatus === 'offline' ? 'not online' : 'online' }}</p>
+<!--      <p>Server {{ 'with' }} id {{ getServerId() }} is {{ serverStatus === 'offline' ? 'not online' : 'online' }}</p>-->
+      <p [ngClass]="{online: serverStatus === 'online', offline: serverStatus === 'offline'}" [ngStyle]="{backgroundColor: getColor()}">Server with id {{ getServerId() }} is {{ serverStatus }}.</p>
       <p>The Server Component Paragraph</p>
       <p class="example">Success Example:<app-success-alert></app-success-alert></p>
       <p class="example">Warning Example:<app-warning-alert></app-warning-alert></p>
+      <button class="btn btn-warning" (click)="onClickDetailsButton($event)">Display Details</button>
+      <p [hidden]="!showDetails">Hercle, detrius festus!.</p>
+      <p [ngClass]="{turnWhite: clickCount >= 5}" [ngStyle]="{backgroundColor: getColor2()}" *ngFor="let click of clickCountArray">Clicks: {{ clickCountArray }}</p>
     </div>
   </div>
 </div>
